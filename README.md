@@ -15,7 +15,7 @@ This project simulates the role of a Junior Data Analyst in the Business Intelli
 4. **Customer Retention:** Identified that 70% of churned users left after a poor 1-star experience.
 
 ## Dashboard Preview
- ![Dashboard Screenshot]
+![Dashboard Screenshot](Dashboard/Dashboard_Snapshot.png)
 
 ## Repository Structure
 - `SQL_Scripts/`: Contains all DDL, Data Cleaning, and 40+ Analytical Queries.
