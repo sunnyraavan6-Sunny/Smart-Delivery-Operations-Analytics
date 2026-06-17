@@ -394,6 +394,78 @@ GROUP BY r.restaurant_id, r.restaurant_name
 ORDER BY total_revenue DESC
 LIMIT 3;
 
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Chennai' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Jaipur' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Delhi' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Ahmedabad' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Kolkata' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Surat' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Hyderabad' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Pune' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
+SELECT r.restaurant_name, SUM(o.order_amount) AS total_revenue
+FROM orders o
+JOIN restaurants r ON o.restaurant_id = r.restaurant_id
+WHERE r.city = 'Bengaluru' AND o.status = 'Delivered'
+GROUP BY r.restaurant_id, r.restaurant_name
+ORDER BY total_revenue DESC
+LIMIT 3;
+
 -- 2. Average delivery time in Delhi vs Pune.
 SELECT r.city, ROUND(AVG(TIMESTAMPDIFF(MINUTE, o.order_time, o.delivered_time)), 2) AS avg_delivery_time
 FROM orders o
